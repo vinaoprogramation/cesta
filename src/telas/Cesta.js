@@ -64,8 +64,8 @@ const estilos = StyleSheet.create({
         textAlign:'center'
     },
     imagemFazenda:{
-        width:32,
-        height:32,
+        width:82,
+        height:82,
         margin:'auto',
     },
     descricao:{
