@@ -4,6 +4,9 @@ import { Text, Image, Dimensions, StyleSheet, View } from "react-native"
 import topo from '../../assets/topo.png';
 import logo from '../../assets/logo.png';
 
+import TEXTO from "../componentes/Texto";
+
+
 const width = Dimensions.get('screen').width
 
 export default function Cesta(){
@@ -11,11 +14,12 @@ export default function Cesta(){
         <Image source={topo} style={estilos.topo}/>
 
         <Text style={estilos.titulo}> Detalhes da cesta </Text>
-        <Text style={estilos.nome}> Cesta de Verduras </Text>
+        <TEXTO style={estilos.nome}> Cesta de Verduras </TEXTO>
 
         <View styles={estilos.fazenda}>
-            <Text style={estilos.nomeFazenda}> Jenny Jack Farm </Text>
-            <Image source={logo} style={estilos.imagemFazenda}/>
+
+        <TEXTO style={estilos.nomeFazenda}> Jenny Jack Farm </TEXTO>
+        <Image source={logo} style={estilos.imagemFazenda}/>
 
         </View>
 
@@ -30,7 +34,7 @@ export default function Cesta(){
 const estilos = StyleSheet.create({
     topo:{
         width: "100%",
-        height: 578/ 768 * width,
+       // height: 578/ 768 * width,
     },
     titulo:{
         width: "100%",
@@ -52,7 +56,8 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         fontWeight: 'bold',
-        textAlign:'center'
+        textAlign:'center',
+        fontFamily:'MontserratBold'
     },
     fazenda:{
         flexDirection:'row',
@@ -61,7 +66,9 @@ const estilos = StyleSheet.create({
     nomeFazenda:{
         fontSize: 16,
         lineHeight: 16,
-        textAlign:'center'
+        textAlign:'center',
+        fontFamily:'MontserratRegular',
+        fontWeight: 'normal'
     },
     imagemFazenda:{
         width:82,
